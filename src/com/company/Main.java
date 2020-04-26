@@ -1,6 +1,5 @@
 package com.company;
 
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
@@ -15,10 +14,23 @@ public class Main {
                 PrintStream out = new PrintStream(socket.getOutputStream());
         System.out.println("[!]Connected");
 
-        System.out.println("Please enter your username");
-        Scanner usrname = new Scanner(System.in);
-        String srvun = usrname.nextLine();
-        System.out.println(srvun);
+        System.out.println("[1] Create join code [2] Join");
+
+        Scanner usrin = new Scanner(System.in);
+        String in = usrin.nextLine();
+
+        if (in == "1"){
+
+            System.out.println("");
+
+        }
+
+        System.out.println(in);
+
+
+
+
+
         out.println(srvun);
 
 

@@ -7,19 +7,14 @@ import java.util.ArrayList;
 
 public class SVR {
     public static void main(String[] args) throws IOException {
-        String code, username;
+        String code, temp;
         ServerSocket s1 = new ServerSocket(136); // Host on this port
 
            Socket ss = s1.accept();// accept incoming packets
            Scanner sc = new Scanner(ss.getInputStream()); // read from socket
            code = sc.next();
 
-           username = code;
-
-        ArrayList Users = new ArrayList();
-
-            Users.add(username);
-
+           temp = code;
 
 
 
