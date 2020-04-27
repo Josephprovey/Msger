@@ -1,14 +1,15 @@
 package com.company;
 
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
+
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, UnknownHostException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 	// write your code here
 
         Socket socket = new Socket("127.0.0.1", 136); //connect to server
@@ -20,12 +21,15 @@ public class Main {
         Scanner usrin = new Scanner(System.in);
         String in = usrin.nextLine();
 
-        if (in == "1"){
+
+
+        if (in.equals("1")) {
+
             int Code = 0;
 
             System.out.println("Your code is:" + Code);
 
-        } else if (in == "2"){
+        } else if (in.equals("2")) {
 
             System.out.println("Please enter join code: ");
             Scanner joincode = new Scanner(System.in);
@@ -34,7 +38,8 @@ public class Main {
         } else {
 
             System.out.println("Huh? please try agian");
-            Thread.sleep(2000);
+            Thread.sleep(200);
+
 
 
         }
@@ -44,8 +49,9 @@ public class Main {
 
 
 
+        String srvun = "Failed on client end";
 
-        //out.println(srvun);
+        out.println(srvun);
 
 
 
